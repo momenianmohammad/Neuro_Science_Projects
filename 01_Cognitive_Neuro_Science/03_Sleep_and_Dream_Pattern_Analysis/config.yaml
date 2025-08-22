@@ -1,0 +1,80 @@
+# Sleep Analysis Tool Configuration
+# ================================
+
+# EEG Processing Parameters
+eeg_processing:
+  sampling_rate: 256          # Hz
+  epoch_length: 30            # seconds
+  filter_low: 0.3            # Hz - high-pass filter
+  filter_high: 100           # Hz - low-pass filter
+  notch_freq: 50             # Hz - power line noise removal
+
+# Frequency Bands for Sleep Analysis
+frequency_bands:
+  delta: [0.5, 4]            # Slow wave sleep
+  theta: [4, 8]              # Light sleep, REM
+  alpha: [8, 13]             # Relaxed wake
+  beta: [13, 30]             # Active wake
+  gamma: [30, 100]           # High-frequency activity
+
+# Machine Learning Parameters
+classifier:
+  model_type: "RandomForest"
+  n_estimators: 100
+  max_depth: 10
+  random_state: 42
+  class_weight: "balanced"
+  test_size: 0.2
+
+# Sleep Quality Scoring Weights
+quality_weights:
+  sleep_efficiency: 0.30     # Weight for sleep efficiency
+  sleep_onset: 0.20          # Weight for sleep onset latency
+  deep_sleep: 0.20           # Weight for N3 percentage
+  rem_sleep: 0.15            # Weight for REM percentage
+  fragmentation: 0.15        # Weight for sleep fragmentation
+
+# Normal Ranges for Sleep Metrics
+normal_ranges:
+  sleep_efficiency:
+    excellent: 90            # >= 90%
+    good: 85                 # >= 85%
+    fair: 75                 # >= 75%
+  
+  sleep_onset_latency:
+    normal: 30               # <= 30 minutes
+    delayed: 60              # > 30 minutes
+  
+  deep_sleep_percentage:
+    adequate: 15             # >= 15%
+    insufficient: 10         # < 15%
+  
+  rem_percentage:
+    normal_min: 20           # >= 20%
+    normal_max: 25           # <= 25%
+
+# Visualization Settings
+visualization:
+  figure_size: [15, 10]
+  dpi: 300
+  style: "seaborn"
+  color_palette:
+    wake: "#FF6B6B"
+    n1: "#4ECDC4"
+    n2: "#45B7D1"
+    n3: "#96CEB4"
+    rem: "#FECA57"
+
+# Report Settings
+report:
+  include_recommendations: true
+  detailed_metrics: true
+  save_format: "txt"
+  include_plots: true
+
+# File Paths
+paths:
+  output_dir: "./output/"
+  plots_dir: "./plots/"
+  reports_dir: "./reports/"
+  models_dir: "./models/"
