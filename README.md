@@ -529,9 +529,9 @@ If you use this software in your research, please cite:
 ```bibtex
 @software{neuroscience_projects_2024,
   title={Advanced Neuroscience Projects Collection},
-  author={Your Name and Contributors},
+  author={Mohammad Momenian},
   year={2024},
-  url={https://github.com/your-username/neuroscience-projects},
+  url={https://github.com/momenianmohammad/Neuro_Science_Projects/edit/main/README.md},
   version={1.0.0}
 }
 ```
