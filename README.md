@@ -490,9 +490,8 @@ We welcome contributions from the neuroscience and AI communities!
 ### Research Collaboration
 
 Interested in research collaboration? Contact us at:
-- 📧 Email: research@neuroscience-projects.org
+- 📧 Email: mohammadmomenian1@gmail.com
 - 💬 Discussion Forum: [GitHub Discussions](https://github.com/your-repo/discussions)
-- 🐦 Twitter: [@NeuroProjects](https://twitter.com/neuroprojects)
 
 ---
 
